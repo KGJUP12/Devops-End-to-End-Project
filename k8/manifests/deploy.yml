@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: go-web-app-deployment
+  labels:
+      app: go-deploy-label
+spec:
+  replicas: 3
+  selector: 
+    matchLabels: 
+      app: go-pod-label
+  template:
+    metadata:
+      labels:
+        app: go-pod-label
+    spec:
+      containers: 
+        - name: go-web-app-container
+          image: archnet69/go-web-app:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
