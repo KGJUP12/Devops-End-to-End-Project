@@ -17,6 +17,6 @@ spec:
       containers: 
         - name: go-web-app-container
           image: archnet69/go-web-app:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
