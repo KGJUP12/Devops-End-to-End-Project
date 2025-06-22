@@ -1,2 +1,2 @@
 # Devops-End-to-End-Project
-Devopsifying simple go application
+A simple application ran using Docker and Kubernetes
